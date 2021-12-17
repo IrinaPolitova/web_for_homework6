@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} Анкета {% endblock %}
+
+{% block content %}
+
+    <form action="/process" method = 'GET'>
+    <fieldset>
+    <legend><b>Часть 1: Информация о вас</b></legend>
+
+        Владеете ли вы русским языком как родным?<br>
+    <input type="radio" name="rus" value="yes"> Да<br>
+    <input type="radio" name="rus" value="no"> Нет<br><br>
+
+        Сколько вам лет?
+    <input type="text" name="age" required pattern='[0-9]+'><br><br>
+
+        Нажимая Тык, вы даете согласие на участие в эксперименте:<br>
+    <input type="checkbox" name="accept" value="accepted" required> Тык<br><br>
+
+    </fieldset>
+
+    <fieldset>
+    <legend><b>Часть 2: Заклятые друзья</b></legend>
+
+        Считаете ли вы словосочетание "заклятые друзья" приемлемым с точки зрения русского языка?<br>
+    <input type="radio" name="gram" value="yes"> Да<br>
+    <input type="radio" name="gram" value="no"> Нет<br><br>
+
+        Как вам кажется, что оно может значить?<br>
+    <input type="radio" name="mean" value="friendship"> Очень крепкую дружбу<br>
+    <input type="radio" name="mean" value="frenemy"> Сочетание дружбы и вражды<br>
+    <input type="radio" name="mean" value="rock"> Дружбу, которая оказалась роковой для кого-то из друзей<br>
+    <input type="radio" name="mean" value="other"> Что-то другое<br><br>
+
+        Есть ли для вас разница между употреблением этого словосочетания в кавычках и без?<br>
+    <input type="radio" name="differ" value="yes"> Да<br>
+    <input type="radio" name="differ" value="no"> Нет<br><br>
+
+    </fieldset>
+
+    <p><input type="submit" value="Отправить"></p>
+
+    </form>
+
+
+{% endblock %}

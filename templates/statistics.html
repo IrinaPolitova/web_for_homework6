@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Статистика {% endblock %}
+
+{% block content %}
+
+    <table>
+        <tr>
+            <td>Средний возраст участников эксперимента: </td>
+            <td>{{ all_info['age_mean'] }}</td>
+        </tr>
+        <tr>
+            <td>Количество участников эксперимента: </td>
+            <td>{{ all_info['total_count'] }}</td>
+        </tr>
+        <tr>
+            <td>Сколько людей сказали, что "заклятые друзья" грамматично: </td>
+            <td>{{ all_info['gram_percentage'] }}</td>
+        </tr>
+
+
+{% endblock %}

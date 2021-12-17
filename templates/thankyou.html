@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Спасибо! {% endblock %}
+
+{% block content %}
+    <h4>Большое спасибо за участие в эксперименте! Ваши ответы сохранены.</h4>
+
+    <button type="button" class="btn btn-primary" onclick="window.location.href = '/';">Вернуться на главную страницу</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href = '/form';">Пройти форму ещё раз</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href = '/statistics';">Посмотреть статистику ответов</button>
+
+{% endblock %}
